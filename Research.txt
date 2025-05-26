@@ -1,0 +1,14 @@
+Port	Protocol	Common Service	Description	Security Notes
+80	TCP	HTTP (Web Server)	Default port for unencrypted websites. Used by Apache, Nginx, IIS, etc.	Data is unencrypted. Susceptible to man-in-the-middle attacks. Should redirect to HTTPS.
+443	TCP	HTTPS (Secure Web)	Encrypted web traffic using SSL/TLS. Standard for secure sites.	Proper certificate validation is critical. Commonly targeted for SSL vulnerabilities.
+1900	TCP/UDP	UPNP (Universal Plug and Play)	Used for automatic discovery of devices on local networks (e.g., smart TVs, routers).	Often misconfigured. Can expose internal services to external attackers.
+7443	TCP	OracleAS HTTPS	HTTPS variant used by Oracle Application Server and admin consoles.	Often used for management interfaces — a prime target for attacks if left exposed.
+8080	TCP	HTTP-Proxy / Alternate HTTP	Alternate HTTP port used by proxies or for apps like Jenkins, Tomcat, etc.	Must ensure authentication if used as a proxy or dashboard. Can leak data if misconfigured.
+8443	TCP	HTTPS-Alt / Admin Panels	Secure web interface for administration (used by Tomcat, VMware, etc.).	Should be protected by authentication and not exposed to the public unless necessary.
+
+ Security Recommendations
+Area	Recommendation
+ HTTPS/SSL	Ensure TLS certificates are valid, not expired, and use modern ciphers.
+ Access Controls	Management and admin ports (7443, 8443, 8080) should require login and IP-based restrictions.
+ Firewall	Restrict UPNP (1900) to internal LAN only, and monitor for unusual traffic.
+ Monitoring	Log traffic to these ports, especially 8080 and 7443, as they are common targets in exploits.
