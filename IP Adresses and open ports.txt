@@ -1,0 +1,22 @@
+Nmap Scan Results – Interactive Summary
+Host: 192.168.29.1 (reliance.reliance)
+Status: Host is up (0.0035s latency)
+MAC Address: A8:DA:0C:79:21:D7 (Vendor unknown)
+
+Port	Protocol	State	Service	Description
+80	TCP	Open	HTTP	Default web server port. Often used for websites.
+443	TCP	Open	HTTPS	Secure web traffic (SSL/TLS). Used by most secure websites.
+1900	TCP	Open	UPNP	Universal Plug and Play. Used for device discovery, often enabled in home networks.
+7443	TCP	Open	OracleAS-HTTPS	Secure port for Oracle Application Server. Used in enterprise applications.
+8080	TCP	Open	HTTP-Proxy	Common alternate HTTP port. Often used by proxy servers or app servers.
+8443	TCP	Open	HTTPS-Alt	Alternate secure HTTP port, often used by admin panels.
+
+ Host: 192.168.29.15
+Status: Host is up (0.014s latency)
+MAC Address: E2:AB:9F:AB:69:B5 (Vendor unknown)
+Open Ports: None – All 1000 scanned ports are closed.
+
+ Host: 192.168.29.120
+Status:  Host is up (0.00082s latency)
+MAC Address: D8:9C:67:B6:09:8D (Hon Hai Precision Ind.)
+Open Ports:  None – All 1000 scanned ports are filtered.
